@@ -2,7 +2,7 @@
 
 int main(){
 int i;
-
+printf("jogo de xadrez\n\n");
 
 while (i < 5)               // Mover o Bispo 5 casas para a direita:
 {
