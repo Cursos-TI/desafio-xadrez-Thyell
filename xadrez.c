@@ -1,29 +1,28 @@
 #include <stdio.h>
 
 int main(){
-int a, b, c;
+int i;
 
-a = 0;
 
-while (a < 5)               // Mover o Bispo 5 casas para a direita:
+while (i < 5)               // Mover o Bispo 5 casas para a direita:
 {
 printf("Cima Direita\n");   // Imprime a direção do movimento
-a++;
+i++;
 } 
 
-b = 0;
+i = 0;
 do                          // Mover a Rainha 8 casas para Esquerda:
 {
 printf("Esquerda\n");       // Imprime a direção do movimento
-b++;
-}while(b < 8);
+i++;
+}while(i < 8);
 
-for (c = 0; c < 5; c++)    // Mover a Torre 5 casas para a direita:
+for (i = 0; i < 5; i++)    // Mover a Torre 5 casas para a direita:
 {
 printf("Direita\n");        // Imprime a direção do movimento
 }
 
-
+return 0;
 }
 // Desafio de Xadrez - MateCheck
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
