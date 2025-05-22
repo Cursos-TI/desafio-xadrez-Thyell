@@ -1,26 +1,52 @@
 #include <stdio.h>
 
 int main(){
-int i;
-printf("jogo de xadrez\n\n");
 
-while (i < 5)               // Mover o Bispo 5 casas para a direita:
+int i = 1;                  // Variável
+printf("Mover o Bispo;\n\n"); // Nome da peça
+while (i <= 5)              // Move o Bispo para a direita:
 {
-printf("Cima Direita\n");   // Imprime a direção do movimento
-i++;
-} 
+int j = 1;           
+while (j <= 1)              // Move o Bispo para cima:
+{
+printf("Cima\n");           // Imprime a direção do movimento
+j++;                 
+}  
+printf("Direita\n");        // Imprime a direção do movimento
+i++;                 
+}
+
+printf("\n");
+printf("Mover a Rainha:\n\n");// Nome da peça
 
 i = 0;
-do                          // Mover a Rainha 8 casas para Esquerda:
+do                          // Move a Rainha 8 casas para Esquerda:
 {
 printf("Esquerda\n");       // Imprime a direção do movimento
 i++;
 }while(i < 8);
 
-for (i = 0; i < 5; i++)    // Mover a Torre 5 casas para a direita:
+printf("\n");
+printf("Mover a Torre:\n\n"); // Nome da peça
+
+for (i = 0; i < 5; i++)     // Move a Torre 5 casas para a direita:
 {
 printf("Direita\n");        // Imprime a direção do movimento
 }
+
+printf("\n");
+printf("Mover o Cavalo:\n\n");
+
+int pecaCavalo = 1;
+
+while (pecaCavalo--)
+{
+for(i = 0; i < 2; i++){     // Move o cavalo duas casas para cima e uma para a direita:
+printf("Cima\n");           // Imprime a direção do movimento
+}
+printf("Direita\n");        // Imprime a direção do movimento
+}
+printf("\n");
 
 return 0;
 }
