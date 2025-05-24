@@ -1,52 +1,56 @@
 #include <stdio.h>
+#include <stdlib.h>
+
+void imprimirBispo() // Defini o procedimento para imprimir a mensagem da peça Bispo.
+{ int i; while (i <= 5){ int j = 1; while (j <= 1){ printf("Cima\n"); j++;}printf("Direita\n");i++;}
+printf("\n");}
+void imprimirRainha() // Defini o procedimento para imprimir a mensagem da peça Rainha.
+{ int i; i = 0; do{ printf("Esquerda\n"); i++;} while(i < 8); printf("\n");}
+void imprimirTorre() // Defini o procedimento para imprimir a mensagem da peça Torre.
+{ int i;for (i = 0; i < 5; i++){printf("Direita\n");}printf("\n");}
+void imprimirCavalo() // Defini o procedimento para imprimir a mensagem da peça Cavalo.
+{ int i; int movimentoCavalo = 1; while (movimentoCavalo--){for(i = 0; i < 2; i++){printf("Cima\n");
+}printf("Direita\n");}printf("\n");}
 
 int main(){
 
-int i = 1;                  // Variável
-printf("Mover o Bispo;\n\n"); // Nome da peça
-while (i <= 5)              // Move o Bispo para a direita:
-{
-int j = 1;           
-while (j <= 1)              // Move o Bispo para cima:
-{
-printf("Cima\n");           // Imprime a direção do movimento
-j++;                 
-}  
-printf("Direita\n");        // Imprime a direção do movimento
-i++;                 
-}
+int i, moverPeca, resultado; // Variáveis
+// Início do jogo
+printf("**********BEM VINDO AO JOGO DE XADREZ**********\n\n");
 
+printf("Escolha uma peça para mover:\n\n");
+
+printf("1. Bispo\n");
+printf("2. Rainha\n");
+printf("3. Torre\n");
+printf("4. Cavalo\n\n");
+
+scanf("%i", &moverPeca);
 printf("\n");
-printf("Mover a Rainha:\n\n");// Nome da peça
 
-i = 0;
-do                          // Move a Rainha 8 casas para Esquerda:
+switch (moverPeca)
 {
-printf("Esquerda\n");       // Imprime a direção do movimento
-i++;
-}while(i < 8);
+case 1:
+    printf("Você escolheu o Bispo:\n");
+    imprimirBispo(i);
+    break;
+    case 2:
+    printf("Você escolheu a Rainha:\n");
+    imprimirRainha(i);
+    break;
+    case 3:
+    printf("Você escolheu a Torre:\n");
+    imprimirTorre(i); 
+    break;
+    case 4:
+    printf("Você escolheu o Cavalo:\n");
+    imprimirCavalo(i);
+    break;
 
-printf("\n");
-printf("Mover a Torre:\n\n"); // Nome da peça
-
-for (i = 0; i < 5; i++)     // Move a Torre 5 casas para a direita:
-{
-printf("Direita\n");        // Imprime a direção do movimento
+default:
+    printf("Opção inválida!\n");
+    break;
 }
-
-printf("\n");
-printf("Mover o Cavalo:\n\n");
-
-int pecaCavalo = 1;
-
-while (pecaCavalo--)
-{
-for(i = 0; i < 2; i++){     // Move o cavalo duas casas para cima e uma para a direita:
-printf("Cima\n");           // Imprime a direção do movimento
-}
-printf("Direita\n");        // Imprime a direção do movimento
-}
-printf("\n");
 
 return 0;
 }
